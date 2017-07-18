@@ -1,1 +1,1 @@
-A Very Simple React Todo App!
+Redux App

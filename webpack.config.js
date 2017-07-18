@@ -29,7 +29,10 @@ module.exports = {
 
     ],
     alias: {
-        applicationStyles: 'app/styles/app.scss'
+        applicationStyles: 'app/styles/app.scss',
+        actions: 'app/actions/actions.jsx',
+        reducers: 'app/reducers/reducers.jsx',
+        configureStore: 'app/store/configureStore.jsx'
 
 
 
@@ -38,15 +41,16 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        loader: 'babel-loader',
-        query:{
-          presets: ['react', 'es2015']
-        },
-        test: /\.jsx?$/,
-        exclude:/(node_modules| bower_components)/
-      }
-    ]
+        {
+          loader: 'babel-loader',
+          query: {
+            presets: ['react', 'es2015', 'stage-0']
+          },
+          test: /\.jsx?$/,
+          exclude: /(node_modules|bower_components)/
+        }
+
+      ]
   },
   sassLoader:{
     includePaths:[
